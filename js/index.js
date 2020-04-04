@@ -7,7 +7,7 @@
     canvas = document.getElementById('gameCanvas')
     gameText = document.getElementById('gameText')
     ctx = canvas.getContext('2d')
-    score = Number(0)    
+    score = Number(1)    
 
     // colours of the game's shapes
     defaultFillColour = '#5DA1B3'
@@ -166,7 +166,6 @@
   // todo: more shapes
 
   // helper funcs
-
   // getRandomInRange returns a random number within the specified range
   function getRandomInRange(min, max) {
     min = Math.ceil(min);
@@ -174,7 +173,7 @@
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
-  // isInsideShape returns true if click position is 
+  // isInsideAFillColourObject returns true if click position is 
   // inside a shape with specified colour
   function isInsideAFillColourObject(point, gridObject, fillColor) {
     return (
@@ -189,7 +188,6 @@
   function bindCanvasMousePos() {
     const canvasDimensions = canvas.getBoundingClientRect()
   }
-
 
   // HTML to load
   document.addEventListener('DOMContentLoaded', begin)
